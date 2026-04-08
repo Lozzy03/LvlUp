@@ -1,0 +1,1 @@
+console.log("LvlUp Arena loaded");
