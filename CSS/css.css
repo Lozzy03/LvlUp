@@ -1,36 +1,59 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0b1020;
-  color: white;
-}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LvlUp Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-nav {
-  background-color: #11182d;
-  padding: 15px 20px;
-}
+  <nav>
+    <a href="#tarife">Tarife</a>
+    <a href="#jocuri">Jocuri</a>
+    <a href="#echipament">Echipament</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
-}
+  <header class="hero">
+    <h1>LvlUp Arena</h1>
+    <p>Club PC modern în Chișinău</p>
+    <button id="tarifeBtn">Vezi Tarifele</button>
+  </header>
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
+  <section id="tarife">
+    <h2>Tarife</h2>
+    <div class="tarife">
+      <div class="card">
+        <h3>Budget</h3>
+        <p>3$ / oră</p>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <p>5$ / oră</p>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p>10$ / oră</p>
+      </div>
+    </div>
+  </section>
 
-.hero button {
-  padding: 12px 24px;
-  background-color: #22c55e;
-  color: black;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
+  <section id="jocuri">
+    <h2>Jocuri</h2>
+    <p>Descoperă jocurile populare.</p>
+  </section>
 
-section {
-  padding: 20px;
-  border-top: 1px solid #1f2937;
-}
+  <section id="echipament">
+    <h2>Echipament</h2>
+    <p>Vezi hardware-ul disponibil.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Date de contact și program.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
