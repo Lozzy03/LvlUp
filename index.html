@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LvlUp Arena — Club PC Chișinău</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">LvlUp <span>Arena</span></div>
+  <div class="nav-links">
+    <button class="nav-btn" onclick="scrollLa('tarife')">Tarife</button>
+    <button class="nav-btn" onclick="scrollLa('jocuri')">Jocuri</button>
+    <button class="nav-btn" onclick="scrollLa('echipament')">Echipament</button>
+    <button class="nav-btn" onclick="scrollLa('contact')">Contact</button>
+    <button class="nav-btn auth-link" onclick="openAuth('login')">Log in</button>
+    <button class="nav-btn auth-link register" onclick="openAuth('register')">Register</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg">
+    <svg viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <rect width="1400" height="700" fill="#060a14"/>
+      <g stroke="#22c55e" stroke-width="0.5" opacity="0.12">
+        <line x1="0" y1="100" x2="1400" y2="100"/><line x1="0" y1="200" x2="1400" y2="200"/><line x1="0" y1="300" x2="1400" y2="300"/><line x1="0" y1="400" x2="1400" y2="400"/><line x1="0" y1="500" x2="1400" y2="500"/><line x1="0" y1="600" x2="1400" y2="600"/>
+        <line x1="200" y1="0" x2="200" y2="700"/><line x1="400" y1="0" x2="400" y2="700"/><line x1="600" y1="0" x2="600" y2="700"/><line x1="800" y1="0" x2="800" y2="700"/><line x1="1000" y1="0" x2="1000" y2="700"/><line x1="1200" y1="0" x2="1200" y2="700"/>
+      </g>
+      <rect x="430" y="100" width="540" height="340" rx="14" fill="#0d1525" stroke="#22c55e" stroke-width="2" opacity="0.8"/>
+      <rect x="442" y="112" width="516" height="316" rx="8" fill="#060f20"/>
+      <line x1="700" y1="180" x2="700" y2="370" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+      <line x1="600" y1="275" x2="800" y2="275" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="700" cy="275" r="35" fill="none" stroke="#22c55e" stroke-width="2" opacity="0.7"/>
+      <circle cx="700" cy="275" r="6" fill="#22c55e" opacity="0.9"/>
+      <rect x="672" y="440" width="56" height="22" rx="4" fill="#0d1525" stroke="#22c55e" stroke-width="1.5" opacity="0.8"/>
+      <rect x="638" y="460" width="124" height="14" rx="7" fill="#0d1525" stroke="#22c55e" stroke-width="1.5" opacity="0.8"/>
+      <rect x="480" y="490" width="440" height="88" rx="10" fill="#0d1525" stroke="#22c55e" stroke-width="1.5" opacity="0.7"/>
+      <g fill="#22c55e" opacity="0.4">
+        <rect x="495" y="506" width="22" height="15" rx="3"/><rect x="522" y="506" width="22" height="15" rx="3"/><rect x="549" y="506" width="22" height="15" rx="3"/><rect x="576" y="506" width="22" height="15" rx="3"/><rect x="603" y="506" width="22" height="15" rx="3"/><rect x="630" y="506" width="22" height="15" rx="3"/><rect x="657" y="506" width="22" height="15" rx="3"/><rect x="684" y="506" width="22" height="15" rx="3"/><rect x="711" y="506" width="22" height="15" rx="3"/><rect x="738" y="506" width="22" height="15" rx="3"/><rect x="765" y="506" width="22" height="15" rx="3"/><rect x="792" y="506" width="22" height="15" rx="3"/><rect x="819" y="506" width="22" height="15" rx="3"/>
+        <rect x="495" y="526" width="33" height="15" rx="3"/><rect x="533" y="526" width="22" height="15" rx="3"/><rect x="560" y="526" width="22" height="15" rx="3"/><rect x="587" y="526" width="22" height="15" rx="3"/><rect x="614" y="526" width="22" height="15" rx="3"/><rect x="641" y="526" width="22" height="15" rx="3"/><rect x="668" y="526" width="22" height="15" rx="3"/><rect x="695" y="526" width="22" height="15" rx="3"/><rect x="722" y="526" width="22" height="15" rx="3"/><rect x="749" y="526" width="22" height="15" rx="3"/><rect x="776" y="526" width="33" height="15" rx="3"/>
+        <rect x="530" y="546" width="340" height="18" rx="3"/>
+      </g>
+      <ellipse cx="960" cy="530" rx="28" ry="42" fill="#0d1525" stroke="#22c55e" stroke-width="2" opacity="0.7"/>
+      <line x1="960" y1="488" x2="960" y2="518" stroke="#22c55e" stroke-width="1.5" opacity="0.7"/>
+      <circle cx="960" cy="525" r="6" fill="#22c55e" opacity="0.6"/>
+      <circle cx="700" cy="275" r="140" fill="#22c55e" opacity="0.025"/>
+      <circle cx="200" cy="150" r="90" fill="#0ea5e9" opacity="0.04"/>
+      <circle cx="1250" cy="500" r="110" fill="#22c55e" opacity="0.03"/>
+      <circle cx="300" cy="420" r="3" fill="#22c55e" opacity="0.7"/>
+      <circle cx="1150" cy="200" r="2.5" fill="#22c55e" opacity="0.6"/>
+      <circle cx="100" cy="580" r="2" fill="#22c55e" opacity="0.5"/>
+      <circle cx="1350" cy="300" r="3" fill="#0ea5e9" opacity="0.6"/>
+      <circle cx="80" cy="260" r="2" fill="#22c55e" opacity="0.5"/>
+      <circle cx="1300" cy="120" r="2.5" fill="#22c55e" opacity="0.7"/>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🟢 Deschis acum — Chișinău</div>
+    <h1>Bun venit la<br><span class="hl">LvlUp Arena!</span></h1>
+    <p>Cel mai avansat club de gaming din Chișinău. Echipament de top, jocuri premium și o experiență de neuitat.</p>
+    <div class="hero-btns">
+      <button class="btn-p" onclick="scrollLa('tarife')">Vezi Tarifele</button>
+      <button class="btn-s" onclick="scrollLa('jocuri')">Explorează Jocurile</button>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">50+</div><div class="stat-label">PC-uri Gaming</div></div>
+  <div class="stat"><div class="stat-num">240Hz</div><div class="stat-label">Monitoare Pro</div></div>
+  <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Jocuri disponibile</div></div>
+  <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Non-stop weekend</div></div>
+</div>
+
+<!-- TARIFE -->
+<section class="section" id="tarife">
+  <div class="sec-header">
+    <div class="sec-tag">// Prețuri</div>
+    <h2>Tarife Disponibile</h2>
+    <p class="sec-sub">Alege configurația potrivită pentru stilul tău de joc</p>
+  </div>
+  <div class="tarife-grid">
+
+    <div class="tarif-card anim">
+      <svg class="card-img" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f2040"/><stop offset="100%" stop-color="#061020"/></linearGradient></defs>
+        <rect width="600" height="170" fill="url(#gb)"/>
+        <g stroke="#22c55e" stroke-width="0.5" opacity="0.12"><line x1="0" y1="42" x2="600" y2="42"/><line x1="0" y1="84" x2="600" y2="84"/><line x1="0" y1="126" x2="600" y2="126"/><line x1="150" y1="0" x2="150" y2="170"/><line x1="300" y1="0" x2="300" y2="170"/><line x1="450" y1="0" x2="450" y2="170"/></g>
+        <rect x="55" y="22" width="190" height="120" rx="7" fill="#0d1b30" stroke="#22c55e" stroke-width="1.8"/>
+        <rect x="64" y="30" width="172" height="100" rx="5" fill="#060f1e"/>
+        <text x="150" y="83" text-anchor="middle" font-family="monospace" font-size="11" fill="#22c55e" opacity="0.85">AOC 24G2</text>
+        <text x="150" y="99" text-anchor="middle" font-family="monospace" font-size="9" fill="#94a3b8" opacity="0.8">144Hz • 1080p • IPS • 1ms</text>
+        <rect x="135" y="142" width="30" height="8" rx="2" fill="#0d1b30" stroke="#22c55e" stroke-width="1"/>
+        <rect x="120" y="149" width="60" height="5" rx="2" fill="#0d1b30" stroke="#22c55e" stroke-width="1"/>
+        <rect x="50" y="155" width="200" height="13" rx="4" fill="#0d1b30" stroke="#22c55e" stroke-width="1.2"/>
+        <g fill="#22c55e" opacity="0.3"><rect x="58" y="158" width="10" height="7" rx="1.5"/><rect x="71" y="158" width="10" height="7" rx="1.5"/><rect x="84" y="158" width="10" height="7" rx="1.5"/><rect x="97" y="158" width="10" height="7" rx="1.5"/><rect x="110" y="158" width="10" height="7" rx="1.5"/><rect x="123" y="158" width="10" height="7" rx="1.5"/><rect x="136" y="158" width="10" height="7" rx="1.5"/><rect x="149" y="158" width="10" height="7" rx="1.5"/><rect x="162" y="158" width="10" height="7" rx="1.5"/><rect x="175" y="158" width="10" height="7" rx="1.5"/><rect x="188" y="158" width="10" height="7" rx="1.5"/><rect x="201" y="158" width="10" height="7" rx="1.5"/></g>
+        <text x="150" y="168" text-anchor="middle" font-family="monospace" font-size="7" fill="#22c55e" opacity="0.5">Redragon K552</text>
+        <ellipse cx="375" cy="72" rx="38" ry="48" fill="none" stroke="#22c55e" stroke-width="1.8" opacity="0.75"/>
+        <rect x="345" y="95" width="12" height="26" rx="6" fill="#0d1b30" stroke="#22c55e" stroke-width="1.4"/>
+        <rect x="378" y="95" width="12" height="26" rx="6" fill="#0d1b30" stroke="#22c55e" stroke-width="1.4"/>
+        <text x="375" y="155" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#94a3b8" opacity="0.8">HyperX Cloud Stinger</text>
+        <ellipse cx="502" cy="82" rx="26" ry="40" fill="#0d1b30" stroke="#22c55e" stroke-width="1.8" opacity="0.85"/>
+        <line x1="502" y1="42" x2="502" y2="70" stroke="#22c55e" stroke-width="1.2" opacity="0.7"/>
+        <circle cx="502" cy="77" r="5" fill="#22c55e" opacity="0.6"/>
+        <text x="502" y="145" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#94a3b8" opacity="0.8">Logitech G203</text>
+        <text x="502" y="158" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#22c55e" opacity="0.5">8000 DPI</text>
+      </svg>
+      <div class="tarif-body">
+        <div class="tarif-name">Budget</div>
+        <div class="tarif-price">3$ <span>/ oră</span></div>
+        <div class="spec-group">
+          <div class="spec-group-title">💻 Configurație PC</div>
+          <div class="spec-item"><span class="spec-label">CPU</span><span class="spec-val">Intel Core i5-12400F</span></div>
+          <div class="spec-item"><span class="spec-label">GPU</span><span class="spec-val">RTX 3060 <span class="spec-tag">12 GB</span></span></div>
+          <div class="spec-item"><span class="spec-label">RAM</span><span class="spec-val">16 GB DDR4 3200MHz</span></div>
+          <div class="spec-item"><span class="spec-label">Stocare</span><span class="spec-val">512 GB NVMe SSD</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🖥️ Monitor — AOC 24G2</div>
+          <div class="spec-item"><span class="spec-label">Diagonală</span><span class="spec-val">24 inch</span></div>
+          <div class="spec-item"><span class="spec-label">Rezoluție</span><span class="spec-val">1920×1080 <span class="spec-tag">Full HD</span></span></div>
+          <div class="spec-item"><span class="spec-label">Rată refresh</span><span class="spec-val">144Hz <span class="spec-tag">IPS</span></span></div>
+          <div class="spec-item"><span class="spec-label">Răspuns</span><span class="spec-val">1ms GtG</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">⌨️ Tastatură — Redragon K552</div>
+          <div class="spec-item"><span class="spec-label">Switch</span><span class="spec-val">Outemu Red <span class="spec-tag">Mecanică</span></span></div>
+          <div class="spec-item"><span class="spec-label">Iluminare</span><span class="spec-val">RGB backlit</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🖱️ Mouse — Logitech G203</div>
+          <div class="spec-item"><span class="spec-label">DPI</span><span class="spec-val">200 — 8.000</span></div>
+          <div class="spec-item"><span class="spec-label">Senzor</span><span class="spec-val">HERO Optical</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🎧 Căști — HyperX Cloud Stinger</div>
+          <div class="spec-item"><span class="spec-label">Sunet</span><span class="spec-val">Stereo 2.0, 50mm</span></div>
+          <div class="spec-item"><span class="spec-label">Microfon</span><span class="spec-val">Încorporat, rotativ</span></div>
+        </div>
+        <button class="btn-sel" onclick="selectTarif('Budget','3$')">Selectează Tariful</button>
+      </div>
+    </div>
+
+    <div class="tarif-card featured anim">
+      <div class="f-badge">Popular</div>
+      <svg class="card-img" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a2010"/><stop offset="100%" stop-color="#061410"/></linearGradient></defs>
+        <rect width="600" height="170" fill="url(#gp)"/>
+        <g stroke="#22c55e" stroke-width="0.5" opacity="0.15"><line x1="0" y1="42" x2="600" y2="42"/><line x1="0" y1="84" x2="600" y2="84"/><line x1="0" y1="126" x2="600" y2="126"/><line x1="150" y1="0" x2="150" y2="170"/><line x1="300" y1="0" x2="300" y2="170"/><line x1="450" y1="0" x2="450" y2="170"/></g>
+        <rect x="35" y="18" width="215" height="128" rx="7" fill="#0d1b20" stroke="#22c55e" stroke-width="2.2"/>
+        <rect x="44" y="26" width="197" height="108" rx="5" fill="#060f14"/>
+        <rect x="44" y="26" width="197" height="108" fill="#22c55e" opacity="0.03" rx="5"/>
+        <text x="142" y="80" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#22c55e" opacity="0.9">ASUS TUF VG27AQ</text>
+        <text x="142" y="96" text-anchor="middle" font-family="monospace" font-size="9" fill="#94a3b8">165Hz • QHD • IPS</text>
+        <text x="142" y="110" text-anchor="middle" font-family="monospace" font-size="8" fill="#4ade80" opacity="0.7">G-Sync • 1ms MPRT</text>
+        <rect x="130" y="146" width="24" height="8" rx="2" fill="#0d1b20" stroke="#22c55e" stroke-width="1.2"/>
+        <rect x="115" y="153" width="54" height="5" rx="2" fill="#0d1b20" stroke="#22c55e" stroke-width="1.2"/>
+        <rect x="30" y="157" width="225" height="13" rx="4" fill="#0d1b20" stroke="#22c55e" stroke-width="1.5"/>
+        <g fill="#22c55e" opacity="0.4"><rect x="38" y="160" width="9" height="7" rx="1.5"/><rect x="50" y="160" width="9" height="7" rx="1.5"/><rect x="62" y="160" width="9" height="7" rx="1.5"/><rect x="74" y="160" width="9" height="7" rx="1.5"/><rect x="86" y="160" width="9" height="7" rx="1.5"/><rect x="98" y="160" width="9" height="7" rx="1.5"/><rect x="110" y="160" width="9" height="7" rx="1.5"/><rect x="122" y="160" width="9" height="7" rx="1.5"/><rect x="134" y="160" width="9" height="7" rx="1.5"/><rect x="146" y="160" width="9" height="7" rx="1.5"/><rect x="158" y="160" width="9" height="7" rx="1.5"/><rect x="170" y="160" width="9" height="7" rx="1.5"/><rect x="182" y="160" width="9" height="7" rx="1.5"/></g>
+        <text x="142" y="170" text-anchor="middle" font-family="monospace" font-size="7" fill="#22c55e" opacity="0.6">SteelSeries Apex 3</text>
+        <ellipse cx="378" cy="66" rx="42" ry="52" fill="none" stroke="#22c55e" stroke-width="2.2" opacity="0.85"/>
+        <rect x="344" y="90" width="14" height="30" rx="7" fill="#0d1b20" stroke="#22c55e" stroke-width="1.5"/>
+        <rect x="378" y="90" width="14" height="30" rx="7" fill="#0d1b20" stroke="#22c55e" stroke-width="1.5"/>
+        <line x1="344" y1="107" x2="315" y2="118" stroke="#22c55e" stroke-width="1.2" opacity="0.7"/>
+        <circle cx="312" cy="119" r="6" fill="#22c55e" opacity="0.45"/>
+        <text x="378" y="155" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#94a3b8">HyperX Cloud Alpha</text>
+        <text x="378" y="167" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#22c55e" opacity="0.5">Dual chamber • Noise-cancel</text>
+        <ellipse cx="506" cy="82" rx="30" ry="45" fill="#0d1b20" stroke="#22c55e" stroke-width="2" opacity="0.9"/>
+        <line x1="506" y1="37" x2="506" y2="67" stroke="#22c55e" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="506" cy="74" r="6" fill="#22c55e" opacity="0.7"/>
+        <text x="506" y="148" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8">Razer DeathAdder V3</text>
+        <text x="506" y="160" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#22c55e" opacity="0.5">30.000 DPI • Focus Pro</text>
+      </svg>
+      <div class="tarif-body">
+        <div class="tarif-name">Pro</div>
+        <div class="tarif-price">5$ <span>/ oră</span></div>
+        <div class="spec-group">
+          <div class="spec-group-title">💻 Configurație PC</div>
+          <div class="spec-item"><span class="spec-label">CPU</span><span class="spec-val">Intel Core i7-13700K</span></div>
+          <div class="spec-item"><span class="spec-label">GPU</span><span class="spec-val">RTX 3070 Ti <span class="spec-tag">8 GB</span></span></div>
+          <div class="spec-item"><span class="spec-label">RAM</span><span class="spec-val">32 GB DDR5 5200MHz</span></div>
+          <div class="spec-item"><span class="spec-label">Stocare</span><span class="spec-val">1 TB NVMe Gen4</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🖥️ Monitor — ASUS TUF VG27AQ</div>
+          <div class="spec-item"><span class="spec-label">Diagonală</span><span class="spec-val">27 inch</span></div>
+          <div class="spec-item"><span class="spec-label">Rezoluție</span><span class="spec-val">2560×1440 <span class="spec-tag">QHD</span></span></div>
+          <div class="spec-item"><span class="spec-label">Rată refresh</span><span class="spec-val">165Hz <span class="spec-tag">IPS</span> <span class="spec-tag">G-Sync</span></span></div>
+          <div class="spec-item"><span class="spec-label">Răspuns</span><span class="spec-val">1ms MPRT</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">⌨️ Tastatură — SteelSeries Apex 3</div>
+          <div class="spec-item"><span class="spec-label">Switch</span><span class="spec-val">SteelSeries QX2 <span class="spec-tag">Mecanică</span></span></div>
+          <div class="spec-item"><span class="spec-label">Iluminare</span><span class="spec-val">RGB per-tastă, 10 zone</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🖱️ Mouse — Razer DeathAdder V3</div>
+          <div class="spec-item"><span class="spec-label">DPI</span><span class="spec-val">100 — 30.000</span></div>
+          <div class="spec-item"><span class="spec-label">Senzor</span><span class="spec-val">Focus Pro 30K Optical</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🎧 Căști — HyperX Cloud Alpha</div>
+          <div class="spec-item"><span class="spec-label">Sunet</span><span class="spec-val">Stereo Hi-Fi, dual-chamber</span></div>
+          <div class="spec-item"><span class="spec-label">Microfon</span><span class="spec-val">Detașabil, noise-cancel</span></div>
+        </div>
+        <button class="btn-sel" onclick="selectTarif('Pro','5$')">Selectează Tariful</button>
+      </div>
+    </div>
+
+    <div class="tarif-card anim">
+      <svg class="card-img" viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="gpr" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#150a28"/><stop offset="100%" stop-color="#080614"/></linearGradient></defs>
+        <rect width="600" height="170" fill="url(#gpr)"/>
+        <g stroke="#22c55e" stroke-width="0.5" opacity="0.12"><line x1="0" y1="42" x2="600" y2="42"/><line x1="0" y1="84" x2="600" y2="84"/><line x1="0" y1="126" x2="600" y2="126"/><line x1="150" y1="0" x2="150" y2="170"/><line x1="300" y1="0" x2="300" y2="170"/><line x1="450" y1="0" x2="450" y2="170"/></g>
+        <rect x="28" y="14" width="240" height="138" rx="9" fill="#0d1020" stroke="#22c55e" stroke-width="2.5"/>
+        <rect x="37" y="22" width="222" height="118" rx="6" fill="#060818"/>
+        <rect x="37" y="22" width="222" height="118" fill="#22c55e" opacity="0.04" rx="6"/>
+        <text x="148" y="78" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#22c55e">LG 27GP850-B</text>
+        <text x="148" y="94" text-anchor="middle" font-family="monospace" font-size="9" fill="#4ade80" opacity="0.9">240Hz • QHD • Nano IPS</text>
+        <text x="148" y="108" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8" opacity="0.8">HDR400 • 1ms GtG</text>
+        <rect x="136" y="152" width="24" height="8" rx="2" fill="#0d1020" stroke="#22c55e" stroke-width="1.5"/>
+        <rect x="118" y="159" width="60" height="5" rx="2" fill="#0d1020" stroke="#22c55e" stroke-width="1.5"/>
+        <rect x="26" y="157" width="220" height="13" rx="4" fill="#0d1020" stroke="#22c55e" stroke-width="1.5"/>
+        <g fill="#22c55e" opacity="0.42"><rect x="34" y="160" width="9" height="7" rx="1.5"/><rect x="46" y="160" width="9" height="7" rx="1.5"/><rect x="58" y="160" width="9" height="7" rx="1.5"/><rect x="70" y="160" width="9" height="7" rx="1.5"/><rect x="82" y="160" width="9" height="7" rx="1.5"/><rect x="94" y="160" width="9" height="7" rx="1.5"/><rect x="106" y="160" width="9" height="7" rx="1.5"/><rect x="118" y="160" width="9" height="7" rx="1.5"/><rect x="130" y="160" width="9" height="7" rx="1.5"/><rect x="142" y="160" width="9" height="7" rx="1.5"/><rect x="154" y="160" width="9" height="7" rx="1.5"/><rect x="166" y="160" width="9" height="7" rx="1.5"/><rect x="178" y="160" width="9" height="7" rx="1.5"/><rect x="190" y="160" width="9" height="7" rx="1.5"/></g>
+        <text x="136" y="170" text-anchor="middle" font-family="monospace" font-size="7" fill="#22c55e" opacity="0.6">Logitech G Pro X TKL</text>
+        <ellipse cx="400" cy="75" rx="26" ry="42" fill="#0d1020" stroke="#22c55e" stroke-width="2.2"/>
+        <line x1="400" y1="33" x2="400" y2="62" stroke="#22c55e" stroke-width="1.5" opacity="0.85"/>
+        <circle cx="400" cy="69" r="6" fill="#22c55e" opacity="0.75"/>
+        <text x="400" y="133" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4ade80" opacity="0.9">G Pro X Superlight 2</text>
+        <text x="400" y="145" text-anchor="middle" font-family="monospace" font-size="7" fill="#94a3b8" opacity="0.7">Wireless • 60g • 32K DPI</text>
+        <ellipse cx="522" cy="64" rx="46" ry="57" fill="none" stroke="#22c55e" stroke-width="2.5" opacity="0.88"/>
+        <rect x="484" y="90" width="15" height="33" rx="7" fill="#0d1020" stroke="#22c55e" stroke-width="1.5"/>
+        <rect x="523" y="90" width="15" height="33" rx="7" fill="#0d1020" stroke="#22c55e" stroke-width="1.5"/>
+        <line x1="484" y1="108" x2="454" y2="122" stroke="#22c55e" stroke-width="1.5" opacity="0.75"/>
+        <circle cx="451" cy="123" r="7" fill="#22c55e" opacity="0.5"/>
+        <text x="522" y="152" text-anchor="middle" font-family="monospace" font-size="8" fill="#4ade80" opacity="0.9">Arctis Nova Pro</text>
+        <text x="522" y="164" text-anchor="middle" font-family="monospace" font-size="7" fill="#94a3b8" opacity="0.7">Hi-Res Audio • ANC</text>
+      </svg>
+      <div class="tarif-body">
+        <div class="tarif-name">Premium</div>
+        <div class="tarif-price">10$ <span>/ oră</span></div>
+        <div class="spec-group">
+          <div class="spec-group-title">💻 Configurație PC</div>
+          <div class="spec-item"><span class="spec-label">CPU</span><span class="spec-val">Intel Core i9-14900K</span></div>
+          <div class="spec-item"><span class="spec-label">GPU</span><span class="spec-val">RTX 4080 <span class="spec-tag">16 GB</span></span></div>
+          <div class="spec-item"><span class="spec-label">RAM</span><span class="spec-val">64 GB DDR5 6000MHz</span></div>
+          <div class="spec-item"><span class="spec-label">Stocare</span><span class="spec-val">2 TB NVMe Gen5</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🖥️ Monitor — LG 27GP850-B</div>
+          <div class="spec-item"><span class="spec-label">Diagonală</span><span class="spec-val">27 inch</span></div>
+          <div class="spec-item"><span class="spec-label">Rezoluție</span><span class="spec-val">2560×1440 <span class="spec-tag">QHD</span></span></div>
+          <div class="spec-item"><span class="spec-label">Rată refresh</span><span class="spec-val">240Hz <span class="spec-tag">Nano IPS</span> <span class="spec-tag">HDR400</span></span></div>
+          <div class="spec-item"><span class="spec-label">Răspuns</span><span class="spec-val">1ms GtG, anti-glare</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">⌨️ Tastatură — Logitech G Pro X TKL</div>
+          <div class="spec-item"><span class="spec-label">Switch</span><span class="spec-val">GX Blue Clicky <span class="spec-tag">Mecanică</span></span></div>
+          <div class="spec-item"><span class="spec-label">Iluminare</span><span class="spec-val">LIGHTSYNC RGB per-tastă</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🖱️ Mouse — Logitech G Pro X Superlight 2</div>
+          <div class="spec-item"><span class="spec-label">DPI</span><span class="spec-val">100 — 32.000</span></div>
+          <div class="spec-item"><span class="spec-label">Greutate / Tip</span><span class="spec-val">60g <span class="spec-tag">Wireless</span></span></div>
+          <div class="spec-item"><span class="spec-label">Senzor</span><span class="spec-val">HERO 25K</span></div>
+        </div>
+        <div class="spec-group">
+          <div class="spec-group-title">🎧 Căști — SteelSeries Arctis Nova Pro</div>
+          <div class="spec-item"><span class="spec-label">Sunet</span><span class="spec-val">Hi-Res Audio <span class="spec-tag">ANC activ</span></span></div>
+          <div class="spec-item"><span class="spec-label">Microfon</span><span class="spec-val">ClearCast Gen2, bidirecțional</span></div>
+        </div>
+        <button class="btn-sel" onclick="selectTarif('Premium','10$')">Selectează Tariful</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- JOCURI -->
+<section class="section" id="jocuri">
+  <div class="sec-header">
+    <div class="sec-tag">// Bibliotecă</div>
+    <h2>Jocuri Populare</h2>
+    <p class="sec-sub">Titluri de top disponibile pe toate stațiile noastre</p>
+  </div>
+  <div class="jocuri-grid" id="jocuriGrid"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ECHIPAMENT -->
+<section class="section" id="echipament">
+  <div class="sec-header">
+    <div class="sec-tag">// Hardware</div>
+    <h2>Echipament Disponibil</h2>
+    <p class="sec-sub">Tehnologie de vârf pentru performanță maximă</p>
+  </div>
+  <div class="echip-grid">
+    <div class="echip-card anim">
+      <svg class="echip-img" viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="epc" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a1628"/><stop offset="100%" stop-color="#060e1e"/></linearGradient></defs>
+        <rect width="600" height="190" fill="url(#epc)"/>
+        <g stroke="#22c55e" stroke-width="0.5" opacity="0.1"><line x1="0" y1="47" x2="600" y2="47"/><line x1="0" y1="94" x2="600" y2="94"/><line x1="0" y1="141" x2="600" y2="141"/><line x1="150" y1="0" x2="150" y2="190"/><line x1="300" y1="0" x2="300" y2="190"/><line x1="450" y1="0" x2="450" y2="190"/></g>
+        <rect x="210" y="18" width="95" height="160" rx="9" fill="#0d1525" stroke="#22c55e" stroke-width="2"/>
+        <rect x="218" y="55" width="79" height="30" rx="4" fill="#111c30" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="257" y="74" text-anchor="middle" font-family="monospace" font-size="8" fill="#22c55e" opacity="0.85">RTX 4080</text>
+        <rect x="218" y="32" width="12" height="20" rx="2" fill="#22c55e" opacity="0.45"/><rect x="234" y="32" width="12" height="20" rx="2" fill="#22c55e" opacity="0.45"/><rect x="250" y="32" width="12" height="20" rx="2" fill="#22c55e" opacity="0.3"/><rect x="266" y="32" width="12" height="20" rx="2" fill="#22c55e" opacity="0.3"/>
+        <circle cx="257" cy="133" r="24" fill="none" stroke="#22c55e" stroke-width="1.8" opacity="0.75"/>
+        <circle cx="257" cy="133" r="9" fill="none" stroke="#22c55e" stroke-width="1.2" opacity="0.5"/>
+        <line x1="257" y1="109" x2="257" y2="157" stroke="#22c55e" stroke-width="1" opacity="0.4"/><line x1="233" y1="133" x2="281" y2="133" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
+        <circle cx="257" cy="170" r="6" fill="#22c55e" opacity="0.7"/>
+        <rect x="220" y="90" width="74" height="10" rx="2" fill="#111c30" stroke="#22c55e" stroke-width="1"/>
+        <text x="257" y="99" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#22c55e" opacity="0.65">2TB Gen5 NVMe</text>
+        <text x="257" y="185" text-anchor="middle" font-family="monospace" font-size="10" fill="#22c55e" opacity="0.55">PC Gaming</text>
+        <text x="400" y="90" text-anchor="middle" font-family="monospace" font-size="13" fill="#22c55e" opacity="0.6">i9-14900K</text>
+        <text x="400" y="108" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8" opacity="0.5">RTX 4080 • 64GB</text>
+      </svg>
+      <div class="echip-body">
+        <div class="echip-icon">🖥️</div>
+        <div class="echip-name">PC-uri Gaming</div>
+        <div class="echip-desc">Configurații de top cu procesoare Intel Core i9 și AMD Ryzen 9 pentru jocuri competitive la cele mai înalte setări grafice.</div>
+      </div>
+    </div>
+    <div class="echip-card anim">
+      <svg class="echip-img" viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="eps5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a0a28"/><stop offset="100%" stop-color="#100618"/></linearGradient></defs>
+        <rect width="600" height="190" fill="url(#eps5)"/>
+        <g stroke="#a855f7" stroke-width="0.5" opacity="0.1"><line x1="0" y1="47" x2="600" y2="47"/><line x1="0" y1="94" x2="600" y2="94"/><line x1="0" y1="141" x2="600" y2="141"/><line x1="150" y1="0" x2="150" y2="190"/><line x1="300" y1="0" x2="300" y2="190"/><line x1="450" y1="0" x2="450" y2="190"/></g>
+        <path d="M245,28 C240,28 215,38 210,95 C205,152 232,168 252,168 L272,168 L276,158 L256,158 C241,158 220,148 225,95 C230,52 248,40 258,38 Z" fill="#1a0a28" stroke="#a855f7" stroke-width="2.2" opacity="0.88"/>
+        <path d="M262,28 C267,28 292,38 297,95 C302,152 275,168 255,168 L252,158 C267,158 288,148 283,95 C278,52 263,40 258,38 Z" fill="#1a0a28" stroke="#a855f7" stroke-width="2.2" opacity="0.88"/>
+        <rect x="222" y="88" width="74" height="9" rx="4" fill="#0d0618" stroke="#a855f7" stroke-width="1.2" opacity="0.75"/>
+        <circle cx="258" cy="53" r="7" fill="none" stroke="#a855f7" stroke-width="1.8" opacity="0.85"/>
+        <line x1="258" y1="46" x2="258" y2="60" stroke="#a855f7" stroke-width="1.5" opacity="0.85"/>
+        <circle cx="258" cy="132" r="17" fill="none" stroke="#a855f7" stroke-width="1.8" opacity="0.65"/>
+        <text x="258" y="137" text-anchor="middle" font-family="serif" font-size="15" fill="#a855f7" opacity="0.75">PS</text>
+        <rect x="175" y="138" width="48" height="32" rx="11" fill="#0d0618" stroke="#a855f7" stroke-width="1.3" opacity="0.65"/>
+        <circle cx="188" cy="149" r="3.5" fill="#a855f7" opacity="0.55"/><circle cx="213" cy="154" r="3.5" fill="#a855f7" opacity="0.55"/>
+        <rect x="315" y="138" width="48" height="32" rx="11" fill="#0d0618" stroke="#a855f7" stroke-width="1.3" opacity="0.65"/>
+        <circle cx="343" cy="149" r="3.5" fill="#a855f7" opacity="0.55"/><circle cx="326" cy="154" r="3.5" fill="#a855f7" opacity="0.55"/>
+        <text x="258" y="175" text-anchor="middle" font-family="monospace" font-size="11" fill="#a855f7" opacity="0.7">PlayStation 5</text>
+        <text x="258" y="187" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8" opacity="0.6">4K • 120fps • Exclusive titles</text>
+      </svg>
+      <div class="echip-body">
+        <div class="echip-icon">🎮</div>
+        <div class="echip-name">PlayStation 5</div>
+        <div class="echip-desc">Joacă titluri exclusive Sony pe ecrane OLED 4K. Multiplayer online și experiențe solo cinematice de excepție.</div>
+      </div>
+    </div>
+    <div class="echip-card anim">
+      <svg class="echip-img" viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="evr" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0a1a28"/><stop offset="100%" stop-color="#060e18"/></linearGradient></defs>
+        <rect width="600" height="190" fill="url(#evr)"/>
+        <g stroke="#0ea5e9" stroke-width="0.5" opacity="0.12"><line x1="0" y1="47" x2="600" y2="47"/><line x1="0" y1="94" x2="600" y2="94"/><line x1="0" y1="141" x2="600" y2="141"/><line x1="150" y1="0" x2="150" y2="190"/><line x1="300" y1="0" x2="300" y2="190"/><line x1="450" y1="0" x2="450" y2="190"/></g>
+        <rect x="175" y="52" width="160" height="84" rx="22" fill="#0d1a28" stroke="#0ea5e9" stroke-width="2.8"/>
+        <ellipse cx="222" cy="94" rx="30" ry="32" fill="#060e18" stroke="#0ea5e9" stroke-width="2.2"/>
+        <ellipse cx="288" cy="94" rx="30" ry="32" fill="#060e18" stroke="#0ea5e9" stroke-width="2.2"/>
+        <ellipse cx="222" cy="94" rx="20" ry="21" fill="#0ea5e9" opacity="0.07"/>
+        <ellipse cx="288" cy="94" rx="20" ry="21" fill="#0ea5e9" opacity="0.07"/>
+        <ellipse cx="222" cy="94" rx="9" ry="9.5" fill="#0ea5e9" opacity="0.18"/>
+        <ellipse cx="288" cy="94" rx="9" ry="9.5" fill="#0ea5e9" opacity="0.18"/>
+        <path d="M175,72 C148,72 126,83 120,94 C126,105 148,116 175,116" fill="none" stroke="#0ea5e9" stroke-width="2.2" opacity="0.65"/>
+        <path d="M335,72 C362,72 384,83 390,94 C384,105 362,116 335,116" fill="none" stroke="#0ea5e9" stroke-width="2.2" opacity="0.65"/>
+        <circle cx="168" cy="142" r="20" fill="#0d1a28" stroke="#0ea5e9" stroke-width="2" opacity="0.85"/>
+        <circle cx="342" cy="142" r="20" fill="#0d1a28" stroke="#0ea5e9" stroke-width="2" opacity="0.85"/>
+        <circle cx="168" cy="142" r="7" fill="#0ea5e9" opacity="0.35"/>
+        <circle cx="342" cy="142" r="7" fill="#0ea5e9" opacity="0.35"/>
+        <line x1="168" y1="122" x2="188" y2="126" stroke="#0ea5e9" stroke-width="1.5" opacity="0.55"/>
+        <line x1="342" y1="122" x2="322" y2="126" stroke="#0ea5e9" stroke-width="1.5" opacity="0.55"/>
+        <text x="255" y="172" text-anchor="middle" font-family="monospace" font-size="12" fill="#0ea5e9" opacity="0.75">VR Gaming</text>
+        <text x="255" y="185" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8" opacity="0.6">Meta Quest Pro • Valve Index</text>
+      </svg>
+      <div class="echip-body">
+        <div class="echip-icon">🥽</div>
+        <div class="echip-name">VR Gaming</div>
+        <div class="echip-desc">Experiențe VR complet imersive cu Meta Quest Pro și Valve Index. Simte acțiunea în realitate virtuală de ultimă generație.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="sec-tag">// Vino la noi</div>
+      <h2>Contacte & Locație</h2>
+      <div class="c-item"><div class="c-icon">📍</div><div class="c-text"><strong>Adresă</strong><span>Chișinău, Str. Gamer 21, etaj 2</span></div></div>
+      <div class="c-item"><div class="c-icon">📞</div><div class="c-text"><strong>Telefon</strong><span>+373 69 555 777</span></div></div>
+      <div class="c-item"><div class="c-icon">✉️</div><div class="c-text"><strong>Email</strong><span>contact@lvluparena.md</span></div></div>
+    </div>
+    <div class="program-box">
+      <h3>// Program de Lucru</h3>
+      <div class="p-row"><span class="zi">Luni — Vineri</span><span class="ora">10:00 — 23:00</span></div>
+      <div class="p-row"><span class="zi">Sâmbătă</span><span class="ora deschis">09:00 — 02:00</span></div>
+      <div class="p-row"><span class="zi">Duminică</span><span class="ora deschis">09:00 — 00:00</span></div>
+      <div class="p-row"><span class="zi">Status acum</span><span class="ora deschis" id="statusAcum">🟢 Deschis</span></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">🎮 LvlUp Arena</div>
+  <p>© 2026 LvlUp Arena. Toate drepturile rezervate.</p>
+  <p>Chișinău, Moldova 🇲🇩</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBG">
+  <div class="modal">
+    <div class="modal-img-wrap" id="modalImgWrap"></div>
+    <div class="modal-body">
+      <div class="modal-genre" id="mGenre"></div>
+      <div class="modal-title" id="mTitle"></div>
+      <div class="modal-desc" id="mDesc"></div>
+      <div class="modal-actions">
+        <button class="btn-joaca" id="btnJoaca">🎮 Joacă Acum</button>
+        <button class="btn-close" onclick="inchideModal()">Închide</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- AUTH MODAL -->
+<div class="modal-bg" id="authBG">
+  <div class="modal auth-modal">
+    <div class="modal-body">
+      <div class="modal-genre" id="authModeText">Account</div>
+      <div class="modal-title" id="authTitle">Log in</div>
+      <form id="registerForm" class="auth-form">
+        <div class="auth-row">
+          <input type="text" id="regName" placeholder="Nume">
+          <input type="text" id="regSurname" placeholder="Prenume">
+        </div>
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="text" id="regPhone" placeholder="Telefon">
+        <input type="password" id="regPassword" placeholder="Parolă">
+        <input type="password" id="regConfirm" placeholder="Confirmare parolă">
+        <button type="submit" class="btn-joaca">Register</button>
+        <button type="button" class="auth-switch" onclick="openAuth('login')">Ai deja cont? Log in</button>
+      </form>
+      <form id="loginForm" class="auth-form">
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Parolă">
+        <button type="submit" class="btn-joaca">Log in</button>
+        <button type="button" class="auth-switch" onclick="openAuth('register')">Nu ai cont? Register</button>
+      </form>
+      <div class="auth-message" id="authMessage"></div>
+      <div class="modal-actions">
+        <button class="btn-close" onclick="closeAuth()">Închide</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="js.js"></script>
+
+</body>
+</html>
